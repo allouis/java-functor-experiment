@@ -3,5 +3,5 @@ package whatever;
 import java.util.function.Function;
 
 public interface Functor<T> {
-	<R> Functor<?> map(Function<? super T, ? extends R> mapFn);
-};
+	<R> Functor<R> map(Function<T, R> mapFn);
+}

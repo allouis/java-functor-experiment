@@ -7,7 +7,7 @@ public class Just<T> extends Maybe<T> {
 		super(_val);
 	}
 	@Override
-	public <R> Just<R> map(Function<? super T, ? extends R> mapFn) {
+	public <R> Just<R> map(Function<T, R> mapFn) {
 		return new Just<R>(mapFn.apply(val));
 	}
 }

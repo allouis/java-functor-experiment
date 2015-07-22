@@ -7,8 +7,9 @@ public class Nothing<T> extends Maybe<T> {
 		super(null);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public <R> Nothing<T> map(Function<? super T, ? extends R> mapFn) {
-		return this;
+	public <R> Nothing<R> map(Function<T, R> mapFn) {
+		return (Nothing<R>) this;
 	};
 }
