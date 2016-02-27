@@ -4,8 +4,8 @@ import java.util.function.Function;
 
 public class Maybe<T> implements Functor<T> {
 	protected T val;
-	public Maybe(T _val) {
-		val = _val;
+	public Maybe(T val) {
+		this.val = val;
 	}
 	@Override
 	public <R> Maybe<R> map(Function<T, R> mapFn) {
